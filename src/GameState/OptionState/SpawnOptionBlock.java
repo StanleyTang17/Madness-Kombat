@@ -11,7 +11,6 @@ import javax.swing.JCheckBox;
 import javax.swing.JOptionPane;
 
 import GameObject.Library;
-import GameState.OptionState.OptionBlock;
 
 public class SpawnOptionBlock extends OptionBlock {
 

@@ -9,7 +9,6 @@ import java.io.IOException;
 
 import javax.swing.JOptionPane;
 
-import GameState.OptionState.OptionBlock;
 import Main.GamePanel;
 
 public class NewLevelBlock extends OptionBlock {
@@ -45,7 +44,7 @@ public class NewLevelBlock extends OptionBlock {
 		String levelName = JOptionPane.showInputDialog("Enter level name");
 		if(levelName != null && levelName != "")
 		{
-			String path = GamePanel.getRootFilePath() + levelName + ".map";
+			String path = GamePanel.getRootFolderPath() + levelName + ".map";
 			try {
 				TileMap.TileMap.writeEmptyMap(path);
 				System.out.println(levelName + ".map created");

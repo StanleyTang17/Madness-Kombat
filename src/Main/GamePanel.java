@@ -28,7 +28,6 @@ public class GamePanel extends JPanel implements Runnable, KeyListener
 	
 	private GameStateManager gsm;
 	private JFrame motherFrame;
-	private static String rootFolderFilePath;
 	private static String levelName = "1";
 	private static File level;
 	private static File configs;
@@ -56,7 +55,6 @@ public class GamePanel extends JPanel implements Runnable, KeyListener
 	private void init()
 	{
 		running = true;
-		GamePanel.setRootFilePath(System.getProperty("user.dir"));
 		gsm = new GameStateManager(this);
 	}
 	
@@ -140,16 +138,6 @@ public class GamePanel extends JPanel implements Runnable, KeyListener
 		gsm.keyReleased(key.getKeyCode());
 	}
 	
-	public static String getRootFilePath()
-	{
-		return rootFolderFilePath;
-	}
-	
-	public static void setRootFilePath(String s)
-	{
-		rootFolderFilePath = s;
-	}
-	
 	public static String getLevelName()
 	{
 		return levelName;
@@ -160,9 +148,19 @@ public class GamePanel extends JPanel implements Runnable, KeyListener
 		levelName = s;
 	}
 	
+	public static String getRootFolderPath()
+	{
+		return System.getProperty("user.dir") + File.separator;
+	}
+	
+	public static String getConfigFilePath()
+	{
+		return getRootFolderPath() + "configs.txt";
+	}
+	
 	public static String getLevelFilePath()
 	{
-		return rootFolderFilePath + "//" + levelName;
+		return getRootFolderPath() + levelName;
 	}
 	
 	public static File getLevelFile()

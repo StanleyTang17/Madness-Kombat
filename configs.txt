@@ -1,5 +1,4 @@
-C:\Users\stabl\eclipse-workspace\Madness Kombat
-6.map
+7.map
 LAST_MAN_STANDING
 Stabley
 1

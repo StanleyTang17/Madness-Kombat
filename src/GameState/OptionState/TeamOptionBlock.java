@@ -7,7 +7,6 @@ import java.awt.Rectangle;
 import java.awt.event.KeyEvent;
 
 import GameObject.Player.Team;
-import GameState.OptionState.OptionBlock;
 
 public class TeamOptionBlock extends OptionBlock {
 	
